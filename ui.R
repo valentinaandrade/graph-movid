@@ -7,6 +7,7 @@ ui <- bs4DashPage(
     navbar = bs4DashNavbar(),
     # sidebar -----------------------------------------------------------------
     sidebar = bs4DashSidebar(
+        disable = T,
         title = NULL,
         expand_on_hover = F,
         fixed = FALSE,
