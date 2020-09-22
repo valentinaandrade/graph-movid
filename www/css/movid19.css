@@ -1,0 +1,56 @@
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #093C66;
+    color: #fff;
+}
+
+/*** driver.js cicerone ***/
+.driver-popover-description,
+.driver-popover-title,
+.driver-close-btn,
+.driver-prev-btn,
+.driver-next-btn {
+  font-family: 'Source Sans Pro' !important;
+  font: none !important;
+}
+
+.driver-close-btn,
+.driver-prev-btn,
+.driver-next-btn {
+  font-size: 13px !important;
+}
+
+/** sweetalert2 **/
+.swal2-icon .swal2-icon-content {
+  font-size: 1.75em !important;
+}
+
+.swal2-icon.swal2-info {
+  font-family: 'Source Sans Pro' !important;
+  border-color: #3de663 !important;
+}
+
+.swal2-icon.swal2-info {
+  color: #aaa !important;
+}
+
+.swal2-content {
+  
+  font-size: 20px !important;
+
+}
+  
+.swal2-icon {
+  width: 2em !important;
+  height: 2em !important;
+  margin: 1.2em;
+}
+
+.swal2-popup {
+  width: 18em !important;
+}
+.swal2-styled,
+.swal2-confirm,
+.swal2-styled,
+.swal2-cancel {
+  font-size: 1rem !important;
+}
