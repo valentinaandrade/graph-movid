@@ -147,10 +147,11 @@ OPTS_REGIONES <- c("Metropolitana de Santiago",
 
 OPTS_ZONA <- c("Norte",
                "Centro",
+               "Gran Santiago",
                "Región Metropolitana",
                "Sur")
 
-
+OPTS_REGIONES <- unique(casen::codigos_subdere$nombre_region)
 # acceso no covid ------------
 
 # highcharter -------------------------------------------------------------
@@ -294,8 +295,10 @@ movid_comunas <- movid  %>%
   merge(casen::codigos_subdere, by.x = c("tipo"), by.y = c("nombre_comuna")) %>%
   group_by(tipo) %>% 
   mutate(media = rollmean(proporcion, k =2, fill = NA), codigo_region = as.numeric(codigo_region),
-         macrozona = case_when(codigo_region %in% c(1,2,3,4) ~ "Norte",
+         codigo_provincia = as.numeric(codigo_provincia),
+         macrozona = case_when(codigo_region %in% c(1,2,3,4,15) ~ "Norte",
                                codigo_region %in% c(5,6,7) ~ "Centro",
-                               codigo_region %in% c(13) ~ "Región Metropolitana",
-                               codigo_region %in% c(8,9,10,12,14) ~ "Sur" )) %>%
+                               codigo_provincia %in% c(131) ~ "Gran Santiago",
+                               codigo_provincia %in% c(132,133,134,135,136) ~ "Región Metropolitana",
+                               codigo_region %in% c(8,9,10,12,14,16) ~ "Sur" )) %>% 
   arrange(tipo, semana_fecha) %>% filter(semana_fecha >= "2020-05-06", tipo !="Cerro Navia")
