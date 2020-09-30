@@ -45,7 +45,7 @@ ui <- bs4DashPage(
                         selectizeInput(
                             "macrozona", NULL, 
                             choices = OPTS_ZONA,
-                            selected = "Centro",
+                            selected = "Gran Santiago",
                             multiple = TRUE, 
                             width = "100%",
                             options = list(maxItems = 5)
